@@ -1,22 +1,37 @@
-import { useEffect } from "react";
-import Card from "../Components/Card";
+import React, { useContext } from 'react'
+import CardUser from '../Components/CardUser';
+import { GlobalContext } from '../Components/utils/global.context'
+
 
 const Home = () => {
 
-  useEffect(() => {
-    //Nesse useEffect, deverá ser obtido todos os dentistas da API
-    //Armazena-los em um estado para posteriormente fazer um map
-    //Usando o componente <Card />
-  }, []);
+  const { data } = useContext(GlobalContext)
 
   return (
     <>
-      <h1>Home</h1>
-      <div className="card-grid container">
-        <Card />
-      </div>
-    </>
-  );
-};
+    <main className="" >
+      <div style={{
+        width: "100%",
+        display: 'flex',
+        flexWrap: "wrap",
+        justifyContent: "center",
+        alignItems: "center",
+        gap: "20px",
+        padding: "10px"
+      }} >
+        {
+          data.map (elemento => {
+              return(
 
-export default Home;
+                <CardUser id={elemento.id}  key={elemento.id}  name={elemento.name} username={elemento.username}  />
+
+              )
+          } )
+        }
+      </div>
+    </main>
+    </>
+  )
+}
+
+export default Home

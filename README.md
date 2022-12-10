@@ -1,100 +1,94 @@
-# ctd-fe3-template
+# ctd-fe3-final
 
-Exame Final de Frontend III
+Examen Final de Frontend III
 
-## Índice
-* [Requisitos](#requisitos)
-  * [Condições mínimas de aprovação](#condições-mínimas-de-aprovação)
-  * [Aspectos que modificam o valor da nota final](#aspectos-que-modificam-o-valor-da-nota-final)
-* [Funcionalidades](#funcionalidades)
-* [Desenvolvimento](#desenvolvimento)
-* [API](#api)
-* [Entrega](#entrega)
-  * [Formato de Entrega](#formato-de-entrega)
+## Indice
 
+- [Requisitos](#requisitos)
+  - [Condiciones mínimas de aprobación](#condiciones-mínimas-de-aprobación)
+  - [Aspectos que modifican la valoración final de la nota](#aspectos-que-modifican-la-valoración-final-de-la-nota)
+- [Funcionalidades](#funcionalidades)
+- [Desarrollo](#desarrollo)
+- [API](#api)
+- [Entrega](#entrega)
+  - [Fecha de Entrega](#fecha-de-entrega)
+  - [Formato de Entrega](#formato-de-entrega)
 
 ## Requisitos
 
-É essencial clonar este projeto em um repositório para poder trabalhar. Não serão aceitos projetos que tenham sido realizados sem partir deste modelo.
+Es indispensable clonar este proyecto en un repositorio privado, para poder trabajar de forma _individual_ o en _dupla_. No se aceptarán proyectos que se hayan realizado sin partir de este template. Para eso deberás crear un repositorio con el nombre "ctd-esp-fe3-final" en tu cuenta de Github y luego seguir los siguientes pasos en tu terminal
 
 ```
-# Clone o repositório para o seu computador
-git clone https://github.com/DigitalHouseBrasil/CTD-FE3-Checkpoint2-Template
+# clona el repositorio del final en tu computadora
+git clone https://github.com/Frontend-III/fe3-final
 
-# Entre na pasta do projeto
-cd CTD-FE3-Checkpoint2-Template
+# ingresa al directorio del final
+cd fe3-final
 
-# Elimine os links do repositório de DH
-git remote rm origin
+# elimina los links al repositorio de DH
+git remove remote origin
 
-# Adicione seu projeto a sua conta do github, ajuste o link para seu nome de usuário e repositório
-git remote add origin https://github.com/<nomedousuario>/<nomedoprojeto>
+# Agrega el link al repositorio de tu cuenta de github, reemplaza <tuusuario> por tu cuenta
+git remote add origin https://github.com/<tuusuario>/fe3-final
 
-# Envie o repositório para o github
+# Sube el template inicial a tu repositorio de github
 git push -u origin main
 ```
-### Condições mínimas de aprovação
 
-As seguintes condições são requisitos mínimos necessários para a aprovação final:
+### Condiciones de aprobación
 
-* **Cumprir todas as funcionalidades obrigatórias**
-* As bibliotecas necessárias para fazer o desenvolvimento já está no package.json
-* O projeto deve ser desenvolvido utilizando Javascript com React.JS.
-* O projeto deve contar com ao menos 5 testes unitários escritos para a aplicação. Para isso, deve ser feito com Jest e React Testing Library. Será considerado a importância desses testes como em um projeto real.
-* Se espera que a página de login, contenha os fluxos de validação necessários (mínimo 2 validações), para um submit correto do formulário.
-* Nos casos em que é requirido fazer uma estilização, deverá realizar tendo em vista o tema do contexto global. 
+Las siguientes condiciones son requisitos mínimos necesarios para la aprobación del final:
 
-### Aspectos que modificam o valor da nota final
+- **Cumplir con todas las funcionalidades obligatorias**
+- Solo se podrán utilizar las librerías que se detallan en este README. Ver [Dependencias](docs/desarrollo.md#dependencias)
+- No se considerará realizada cualquier funcionalidad que sea implementada utilizando una librería distinta a las permitidas.
+- Deberá ser desarrollada utilizando Javascript con React.js como libreria.
+- Se espera que la página de Contacto, contenga los flujos de validación necesarios (minimo 2 validaciones), para un correcto submit del formulario.
+- En los casos en que se requiera dar estilos a componentes, deberá realizarse teniendo en cuenta el theme del contexto global.
 
-Os seguintes aspetos são extra ao requisito de aprovação mínima que serão tidos em conta para a majoração da nota final, desde que a sua correta implementação:
+### Aspectos que modifican la valoración final de la nota
 
-**Validações**
-* Será valorizada a adição de validações de fluxos alternativos ao normal (mais de duas validações) e o correto tratamento de erros em diferentes situações.
+Los siguientes aspectos son extras al requisito mínimo de aprobación que serán tenidos en cuenta para aumentar la nota final, siempre y cuando su implementación sea correcta:
 
-**Testing unitário**
-* Será avaliado o uso correto dos testes unitários e o aumento do número de testes adicionados (mais de 5 casos de teste).
+**Validaciones**
+
+- Una validación para cada campor es suficiente, pueden ser "manuales" o con expreciones regulares. Lo importante es el correcto manejo de errores y submit.
+
+**Funcionalidad de destacados**
+
+- Se valorará funcionalidades extra a esta feature, como lo pueden ser el eliminar de destacadados, manejo de errores al intentar agregar repetidos y reseteo total de los destacados.
+
 
 **Estilos**
-* O estilo de outras seções do App será valorizado (fora do estilo obrigatório das rotas baseadas no tema)
 
-**Boas Práticas**
-* Atenção especial será dada ao uso de boas práticas, melhorias de desempenho (implementando useMemo) e reutilização de código
+- Se valorará el estilado de demas apartados de la App (por fuera del estilado obligatorio de las rutas en base al theme)
+
+**Buenas Prácticas**
+
+- Se prestará especial atención al uso de buenas prácticas, mejoras de performance (implementando useMemo) y la reutilizacion de codigo
 
 ## Funcionalidades
 
 Ver [Funcionalidades](docs/funcionalidades.md).
-    
-## Desenvolvimento
 
-Ver [Desenvolvimento](docs/desenvolvimento.md).
+## Desarrollo
+
+Ver [Desarrollo](docs/desarrollo.md).
 
 ## API
 
-A API que será utilizada será:
-```https://dhodonto.ctdprojetos.com.br/```
+La API a utilizar sera la siguiente:
+`https://jsonplaceholder.typicode.com/users`
 
-Rota com a documentação (Swagger) da API para
-```https://dhodonto.ctdprojetos.com.br/swagger-ui/index.html```
-
-Rota para buscar os dentistas:
-```https://dhodonto.ctdprojetos.com.br/dentista```
-
-Rota para buscar os pacientes:
-```https://dhodonto.ctdprojetos.com.br/paciente```
-
-Rota para o login
-```https://dhodonto.ctdprojetos.com.br/auth```
-
-Para logar na aplicação, utilize:
-* Login: dentistaAdmin
-* Senha: admin123
-
-## Entrega
+Y para cada dentista en especifico:
+`https://jsonplaceholder.typicode.com/users/:id`
 
 ### Formato de Entrega
 
-O envio será aceito enviando o URL do seu repositório clonado e um link do seu projeto na Vercel/Netlify, etc
+- No deberan cambiar los nombres ni ubicacion de las variables/componentes/context que vienen con el repo base
 
-O link do Google Form para submissão será enviado pelo professor responsável pela comissão.
+Se aceptará la entrega mediante la submisión de la URL de su repositorio clonado
 
-Boa sorte e sucesso!
+El link al Google Form para la submisión será enviado por el profesor a cargo de la comisión.
+
+Mucha suerte y éxitos!
